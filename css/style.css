@@ -1,0 +1,605 @@
+*{
+    margin: 0px;
+    padding: 0px;
+
+    scroll-behavior: smooth;
+
+
+}
+
+body{
+    background-image: url(/images/dust-and-scratches-2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: screen;
+
+
+    background-color: #171615;
+
+    
+    color: #F8E6CB;
+
+}
+
+section{
+
+}
+/*text*/
+h1{
+    font-family: "good times";
+    font-size: 2vw;
+}
+
+h2{
+    font-family: "one day";
+    font-size: 1.6vw;
+}
+
+p{
+    font-family: "one day";
+    font-size: 1.2vw;
+    
+}
+
+/*general*/
+
+html{
+    box-sizing: border-box;
+}
+
+.flex{
+    display: flex;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.align-center{
+    align-items: center;
+}
+
+.align-end{
+    align-items: flex-end;
+}
+
+.gap1{
+    gap: 5em;
+}
+
+.space-between{
+    justify-content: space-between;
+}
+
+.space-around{
+    justify-content: space-around;
+}
+
+.flex-start{
+    justify-content: flex-start;
+}
+
+.align-start{
+    align-items: flex-start;
+}
+
+.column{
+    flex-direction: column;
+}
+
+.warp{
+    flex-wrap: wrap;
+}
+
+.reverse{
+    flex-direction: row-reverse;
+}
+
+.column-reverse{
+    flex-direction: column-reverse;
+}
+
+.z3{
+    position: initial;
+    z-index: 3;
+}
+
+
+a{
+    font-style: normal;
+    text-decoration: none;
+
+    color: #000000;
+}
+
+a:hover{
+    font-style: normal;
+    text-decoration: none;
+
+    color: #000000;
+}
+
+.upside-down{
+    rotate: 180deg;
+}
+
+/*Styling*/
+
+.stripe{
+    width: 92vw;
+
+
+    border: 3px solid #F8E6CB;
+    border-radius: 1.5em;
+
+    padding: 1em;
+    margin: 2em;
+
+    gap: 2em;
+    
+}
+
+.stripe h2{
+    font-size: 1.6vw;
+}
+
+.collectionTitle{
+    font-size: 15vw;
+}
+
+.mint-preview{
+    position: relative;
+    border: 3px solid #F8E6CB;
+    border-radius: 1.5em;
+
+    overflow: hidden;
+}
+
+.mint-btn-container{
+    width: 92vw;
+    height: 200vh;
+
+    align-items: flex-end;
+
+    border: 3px solid #F8E6CB;
+    border-radius: 1.5em;
+
+    overflow: hidden;
+
+    background-image: url(/images/astronout\ image.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.mint-btn{
+    background-color: #F8E6CB;
+    margin: -0.2em;
+    padding: 0.2em;
+}
+
+.heart-icon{
+    font-size: 2vw;
+    /* transform:rotatey(100deg); */
+}
+
+.mint-btn h1{
+    margin: 0.5em;
+}
+
+.about{
+    width: 92vw;
+    height: 102vh;
+
+    border: 3px solid #F8E6CB;
+    border-radius: 1.5em;
+
+    background-color: #171615;
+
+    overflow: hidden;
+    
+    
+}
+
+.text-stripe{
+    width: 52vw;
+    height: 100%;
+
+    overflow: hidden;
+
+    border-right: 3px solid #F8E6CB;
+
+}
+
+.text-stripe p{
+    height: 110%;
+    padding: 1em;
+}
+
+
+.stripe-about{
+    height: 17vh;
+
+    width: 101.5%;
+
+    border: 3px solid #F8E6CB;
+
+    margin: -0.5em;
+
+    overflow: hidden;
+
+}
+
+.text-about{
+    height: 100%;
+
+    width: 25%;
+
+    border-left: 3px solid #F8E6CB;
+
+}
+
+.stripe-element{
+    padding: 1.8em;
+
+    width: 25%;
+
+
+    border-left: 3px solid #F8E6CB;
+
+}
+
+.text-bg{
+    border-right: 3px solid #F8E6CB;
+    padding: 1em;
+}
+
+.text-bg h1{
+    text-align: center;
+    font-size: 2.3vw;
+
+}
+
+.text-bg em{
+    font-style: normal;
+    font-size: 4vw;
+}
+
+
+.components-about{
+    width: 30vw;
+}
+
+.circle-component{
+    width: 100%;
+    height: 35%;
+
+    border-bottom: 3px solid #F8E6CB;
+
+
+}
+
+.sign-component{
+    width: 100%;
+    height: 65%;
+}
+
+.circles{
+    --radius: 15vw;
+
+    width: var(--radius);
+    height: var(--radius);
+
+    border: 2px solid #F8E6CB;
+    border-radius: 50%;
+    
+    
+}
+
+.circle1{
+
+
+    width: calc(var(--radius) - 2vw);
+    height: calc(var(--radius) - 2vw);
+
+    border: 2px solid #F8E6CB;
+    border-radius: 50%;
+
+
+}
+
+.circle2{
+    width: calc(var(--radius) - 4vw);
+    height: calc(var(--radius) - 4vw);
+
+    border: 2px solid #F8E6CB;
+    border-radius: 50%;
+}
+
+.circle3{
+    width: calc(var(--radius) - 6vw);
+    height: calc(var(--radius) - 6vw);
+
+    border: 2px solid #F8E6CB;
+    border-radius: 50%;
+}
+
+
+
+
+.sign-container{
+
+    padding: 2em;
+
+    padding-top: 5em;
+    padding-bottom: 5em;
+
+
+    border: 3px solid #F8E6CB;
+    border-radius: 1.5em;
+}
+
+/* .text-bg img{
+
+    background-color: #F8E6CB;
+    background-clip: content-box;
+} */
+
+
+
+/* ROADMAP*/
+
+.roadmap{
+    width: 92vw;
+    height: 98vh;
+
+    border: 3px solid #F8E6CB;
+    border-radius: 1.5em;
+
+    background-color: #171615;
+
+    overflow: hidden;
+
+    margin-top: 2em;
+    margin-bottom: 2em;
+    
+}
+
+.collectionImg{
+    width: 100%;
+    height: 100%;
+
+    background-image: url(/images/astronout\ image.png);
+    background-size: cover;
+
+    border-right: 3px solid #F8E6CB;
+
+    position: initial;
+    z-index: 100;
+
+    background-color: #171615;
+}
+
+.text-rm{
+    width: 45%;
+}
+/*STRIPE*/
+
+.stripe-rm{
+
+    width: 101.5%;
+
+    border: 3px solid #F8E6CB;
+
+    margin: -0.5em;
+
+    margin-left: 0;
+
+    overflow: hidden;
+}
+
+.stripe-element-rm{
+    padding: 1em;
+
+    width: 40%;
+
+    border-right: 3px solid #F8E6CB;
+}
+
+.stripe-element-rm-text{
+
+    height: 100%;
+
+    padding: 1em;
+
+    width: 60%;
+}
+
+/*INTRO TEXT*/
+
+.intro-rm{
+    padding: 1.5em;
+    text-align: right;
+}
+
+/*ROADMAP SCROLL*/
+
+.roadmap-points{
+    width: 100%;
+    flex-wrap: nowrap;
+
+    overflow-x: visible;
+
+}
+
+.roadmap-element{
+    width: 100%;
+    flex: none;
+
+    padding: 2em;
+
+    border: 3px solid #F8E6CB;
+}
+
+.roadmap-element h1{
+    font-size: 4vw;
+}
+
+/*progress bar*/
+
+.progress-rm{
+    position: relative;
+    z-index: 2;
+
+}
+
+.progress-bar{
+    height: 100%;
+    width: 0%;
+
+    background-color: #F8E6CB;
+
+
+    position: absolute;
+    z-index: 1;
+}
+
+.no-border{
+    border-right: 0px transparent;
+}
+
+.progress-point{
+
+    padding: 1em;
+    width: calc(100%/3);
+
+    border-right: 3px solid #F8E6CB;
+    border-bottom: 3px solid #F8E6CB;
+
+}
+
+/*circle*/
+
+.circles-rm{
+    --radius: 25vw
+}
+
+/*info*/
+
+.info{
+    width: 92vw;
+    height: 102vh;
+
+    border: 3px solid #F8E6CB;
+    border-radius: 1.5em;
+
+    background-color: #171615;
+
+    overflow: hidden;
+}
+
+
+
+.padding-s{
+    padding: 1em;
+}
+
+.top-stripe{
+    margin-bottom: 0px;
+}
+
+.bottom-stripe{
+    margin-top: 0px;
+}
+
+.text-circle{
+    width: (calc(100%/3));
+    height: 80vh;
+
+
+}
+
+.text-i{
+    padding: 2em;
+    
+
+}
+
+.border-r-l{
+    border-right: 3px solid #F8E6CB;
+    border-left: 3px solid #F8E6CB;
+}
+
+.border-t{
+    border-top: 3px solid#F8E6CB;
+}
+
+.border-b{
+    border-bottom: 3px solid#F8E6CB;
+}
+
+/*Mint 2*/
+
+.mint-preview2{
+    width: 92vw;
+    height: 200vh;
+
+
+    border: 3px solid #F8E6CB;
+    border-radius: 1.5em;
+
+    overflow: hidden;
+
+    background-image: url(/images/astronout\ image.png);
+    background-size: cover;
+}
+
+.margin-t{
+    margin-top: 2em;
+}
+
+/*squares*/
+
+.squares{
+    --width-sq: 90vw;
+    --height-sq: 190vh;
+
+    width: var(--width-sq);
+    height: var(--height-sq);
+
+    border: 2px solid #F8E6CB;
+    border-radius: 10em;
+}
+
+.square1{
+
+    width: calc(var(--width-sq) - 20vw);
+    height: calc(var(--height-sq) - 20vh);
+
+    border: 2px solid #F8E6CB;
+    border-radius: 10em;
+
+    overflow: hidden;
+}
+
+.square2{
+
+    width: calc(var(--width-sq) - 40vw);
+    height: calc(var(--height-sq) - 40vh);
+
+    border: 2px solid #F8E6CB;
+    border-radius: 10em;
+
+    overflow: hidden;
+}
+
+.square3{
+
+
+    width: calc(var(--width-sq) - 60vw);
+    height: calc(var(--height-sq) - 60vh);
+
+    border: 2px solid #F8E6CB;
+    border-radius: 10em;
+
+    overflow: hidden;
+}
