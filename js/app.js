@@ -8,10 +8,10 @@ var tl3 = new TimelineMax();
 var tlAbout = new TimelineMax();
 var tlRoadmap = new TimelineMax({onUpdate:updatePercentage});
 //info
-
+var tlInfo = new TimelineMax({onUpdate:updatePercentage});
 //
 //mint2
-
+var tlMint2 = new TimelineMax({onUpdate:updatePercentage});
 //
 var tlBottom = new TimelineMax();
 const controller = new ScrollMagic.Controller();
@@ -58,13 +58,24 @@ tlRoadmap.to(".roadmap-points", 1, {x:"-200%"}, "=-1")
 //progress bar
 tlRoadmap.to(".progress-bar", 1, {width:"100%"}, "=-1")
 //zoo-in circles
-tlRoadmap.from(".circles",1,{"--radius":"0vw"}, "=-1")
+tlRoadmap.to(".circles",1,{"--radius": 800}, "=-1")
 
 //info
+tlInfo.from(".info", 2.2, {height:0})
+tlInfo.from(".info", 2 ,{
+    borderTopWidth:0,
+    borderRightWidth:0,
+    borderBottomWidth:0,
+    borderLeftWidth:0,
+}, "=-0.7")
 
+tlAbout.from(".stripe-i>*", 2 ,{opacity:0})
+
+tlInfo.from(".circles", 1 , {"--radius":"2vw"}, "=-2")
 //
 //mint2
-
+tlMint2.from(".squares", 1, {"--width-sq": "65vw", "--height-sq":"120vh"})
+tlMint2.from(".mintBig", 1, {fontSize:"20vw"}, "-=1")
 //
 //stripes bottom
 tlBottom.from(".stripe-bottom-anim", 0.8 ,{
@@ -106,6 +117,7 @@ const sceneStripeBeforeAbout = new ScrollMagic.Scene({
 
 const sceneAbout = new ScrollMagic.Scene({
     triggerElement:".about",
+        triggerHook: "onEnter"
 })
     .setTween(tlAbout)
         .addTo(controller)
@@ -113,17 +125,27 @@ const sceneAbout = new ScrollMagic.Scene({
 const sceneRoadmap = new ScrollMagic.Scene({
     triggerElement: ".roadmap",
     triggerHook: "onLeave",
-    duration: "100%"
+    duration: "800%"
 })
     .setPin(".roadmap")
     .setTween(tlRoadmap)
         .addTo(controller);
 
 //info
-
+const sceneInfo = new ScrollMagic.Scene({
+    triggerElement:".info",
+})
+    .setTween(tlInfo)
+        .addTo(controller)
 //
 //mint2
-
+const sceneMint2 = new ScrollMagic.Scene({
+    triggerElement: ".mint-preview2",
+    triggerHook: "onLeave",
+    duration: "100%"
+})
+    .setTween(tlMint2)
+        .addTo(controller)
 //
 
 const sceneBottomTitle = new ScrollMagic.Scene({

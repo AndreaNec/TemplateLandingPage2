@@ -21,6 +21,37 @@ body{
 
 }
 
+.noise{
+    background-image: url(/images/noise.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode:color-dodge;
+    background-blend-mode: difference;
+
+    opacity: 0.02;
+
+
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+
+    z-index: 50000;
+
+    pointer-events: none;
+
+}
+
+@font-face {
+    font-family: "good times";
+    src: url(/font/good\ times\ rg.otf);
+}
+
+@font-face {
+    font-family: "one day";
+    src: url(/font/ONEDAY.otf);
+    src: url(/font/ONEDAY.ttf);
+}
+
 section{
 
 }
@@ -555,6 +586,17 @@ a:hover{
 
 .margin-t{
     margin-top: 2em;
+}
+
+.mintBig{
+    position: absolute;
+
+}
+
+.mintBig h1{
+    color: #F8E6CB;
+
+    font-size:10vw ;
 }
 
 /*squares*/
